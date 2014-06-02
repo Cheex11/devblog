@@ -7,11 +7,15 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
+  def show
+    @post = Post.find(params[:id])
+  end
+
   def create
-    @post = @link.posts.new(post_params)
+    @post = Post.new(post_params)
     if @post.save
       flash[:notice] = "Your comment has been saved."
-      redirect_to link_path(@post)
+      redirect_to post_path(@post)
     else
       render 'new'
     end

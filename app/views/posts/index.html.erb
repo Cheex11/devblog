@@ -4,12 +4,18 @@
 <ol>
 	<% @posts.each do |post| %>
 		<li>
-			<%= "post.title" %>
+			<%= post.title %>
 		</li>
+		edit || delete</p>
 	<% end %>
 </ol>
 
 
-<div id='log in'>
-	<p>Click here to login</p>
+<a href="/posts/new"><button>Create a New Post</button></a>
+
+
+<div id='login'>
+	<p>login!</p>
 </div>
+
+
