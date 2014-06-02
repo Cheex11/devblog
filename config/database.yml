@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: devblog_development
+
+test:
+  adapter: postgresql
+  database: devblog_test
